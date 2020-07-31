@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BLOG ON RAILS</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  </head>
+
+  <body>
+    <ul class= "navbar">
+      <li class = "active"><%= link_to "Blog On Rails", root_path %></li>
+      <li class = "active"><%= link_to "Home", posts_path %></li>
+      <li class = "active"><%= link_to "New Post", new_post_path %></li>
+
+
+        <% if user_signed_in? %>
+        <li class="active_one color_one"><%= link_to current_user.full_name ,edit_user_path(current_user)%></li>
+        <li class="active_one"><%= link_to "Sign Out", session_path, method: :delete%></li>
+        <% else %>
+           <li class="active_one"><%= link_to "Sign In", new_session_path %></li>
+           <li class = "active_one"><%= link_to "Sing Up", new_user_path %></li>
+        <% end %>
+    </ul>
+
+    <% flash.each do |type, message| %>
+      <div class = "container_fifth"<%= type %> >
+        <%= message %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
