@@ -1,0 +1,12 @@
+<h1 class = "topic">Posts</h1>
+
+
+<% @posts.each do |post| %>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h3 class = "H3"><%= link_to post.title, post_path(post) %></h3>
+        <p class="P1"><%= link_to post.body.truncate(50), post_path(post) %></p>
+      </div>
+    </div>
+<% end %>

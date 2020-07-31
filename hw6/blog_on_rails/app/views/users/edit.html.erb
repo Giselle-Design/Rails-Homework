@@ -1,0 +1,28 @@
+<h1 class = "topic" >Edit Your Account</h1>
+
+<div class="container">
+  <%= form_with  model: @user, local: true do |f| %>
+
+     <div>
+       <%= f.label :first_name %>
+       <%= f.text_field :first_name %>
+     </div>
+
+     <div>
+       <%= f.label :last_name %>
+       <%= f.text_field :last_name %>
+     </div>
+
+     <div>
+       <%= f.label :email %>
+       <%= f.text_area :email %>
+     </div>
+
+     <div><%=f.submit "Update"%></div>
+
+  <% end %>
+
+</div>
+
+<button class="edit_password">
+<%= link_to "Change Password", user_edit_password_path(current_user)%></button>

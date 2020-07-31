@@ -1,0 +1,308 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color:  #003300;
+}
+
+body, html {
+  height: 100%
+}
+
+.bgimg {
+  position: relative;
+  margin: 20px;
+  height: 100%;
+  border-style: solid;
+  background-image : url("https://images.unsplash.com/photo-1466096115517-bceecbfb6fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+
+.middle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.navbar {
+  font-family: Georgia, "Lato black", serif;
+  list-style-type: none;
+  margin: 0 20px 0 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e6ac00;
+  height: 50px;
+}
+
+.active {
+   float: left;
+}
+
+.active_one {
+  float: right;
+}
+
+.active_one a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+.active_one a:hover {
+  background-color:  #997300;
+}
+
+.active a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+.active a:hover {
+  background-color:  #997300;
+}
+
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 7px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #009933;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker blue color */
+input[type=submit]:hover {
+  background-color:  #009933;
+}
+
+
+input[type=email]{
+  padding : 10px;
+  margin-top: 7px;
+  margin-bottom: 16px;
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=password]{
+  padding : 10px;
+  margin-top: 7px;
+  margin-bottom: 16px;
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.container {
+  font-family: Verdana, Arial, serif;
+  border-radius: 5px;
+  background-color: #c2c2a3;
+  padding: 20px;
+  margin: 50px 400px 50px 400px
+}
+
+
+.topic {
+  font-family: Georgia, "Lato black", serif;
+  color : white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  word-spacing: .2em
+}
+
+.container:hover {
+  background:  #e6ac00;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black
+}
+
+.H3 a{
+  text-decoration: none;
+  color: black
+}
+
+.P1 a {
+  text-decoration: none;
+  color: black
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 10px 0px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 0px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: left;
+  background-color: #c2c2a3;
+  border-radius: 5px;
+  margin: 10px 10px;
+  font-family: Verdana, Arial, serif;
+}
+ .card:hover {
+   background:  #e6ac00;
+ }
+
+
+ .edit {
+   background-color: #009933;
+   border-style: none;
+   border-radius: 0.5em;
+   width: 10%;
+   padding: 7px;
+   font-size: 1em;
+   margin-right: 10px;
+ }
+
+ .edit a{
+   text-decoration: none;
+   color: black
+ }
+
+ .edit_password {
+   margin: 50px 400px 50px 400px;
+   background-color: #009933;
+   border-style: none;
+   border-radius: 0.5em;
+   width: 10%;
+   padding: 7px;
+   font-size: 1em;
+   margin-right: 10px;
+   margin-top: 10px;
+ }
+
+.edit_password a {
+  text-decoration: none;
+  color: white
+}
+
+
+
+
+ .delete {
+   background-color: #db0726;
+   border-style: none;
+   border-radius: 0.5em;
+   width: 10%;
+   padding: 7px;
+   font-size: 1em;
+ }
+
+ .delete a {
+   text-decoration: none;
+   color: black
+ }
+
+ .topic_one {
+    color: black;
+ }
+
+ .topic_two {
+   color : white;
+   margin-top: 30px;
+   margin-left: 30px;
+   font-family: Georgia, "Lato black", serif;
+ }
+
+ .delete_one{
+   background-color: #db0726;
+   border-style: none;
+   border-radius: 0.5em;
+   width: 7%;
+   padding: 7px;
+   font-size: 0.8em;
+ }
+
+ .delete_one a {
+   text-decoration: none;
+   color: black
+ }
+
+ small {
+   margin-right: 10px;
+ }
+
+ .topic_two {
+   color : white;
+   margin-top: 30px;
+   margin-left: 20px;
+   margin-bottom: 10px;
+   font-family: Georgia, "Lato black", serif;
+ }
+
+ hr {
+   width: 50%
+ }
+
+ .container_fifth {
+   font-family:  Georgia, "Lato black", serif;
+   padding: 20px;
+   color: white;
+   background-color: #990000;
+   margin: 50px 400px 50px 400px;
+   text-align: center;
+   line-height: 150%;
+   word-spacing: 0.2em;
+   border-radius: 5px
+ }
